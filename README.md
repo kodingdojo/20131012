@@ -10,11 +10,11 @@ của các nhóm nằm ở các nhánh riêng cho từng nhóm.
 
 và checkout sang một nhánh mới có tên ghép của các thành viên:
 
-    git checkout -b chin-thang
+    cd boilerplate && git checkout -b chin-thang
 
 xóa README.md (chỉ để ở nhánh master do người hướng dẫn cập nhật):
 
-    git rm README.md
+    git rm README.md && git commit --message "Remove README.md"
     
 Mỗi khi hoàn thành một test thì người đang code sẽ commit với tên của mình:
 
