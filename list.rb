@@ -12,7 +12,7 @@ class MyTest < Minitest::Test
 end
 
 class TestSingleListDefinition < Minitest::Test
-    def test_initialize
+    def test_initialize_without_arguments
         l = SingleList.new
         assert_equal nil, l.current
         assert_equal nil, l.next
