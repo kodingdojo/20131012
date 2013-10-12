@@ -49,6 +49,8 @@ class SingleList
     def fifth_from_last
         if length == 5
             self
+        elsif length == 6
+            nth(1)
         else
             nil
         end
@@ -70,6 +72,17 @@ class TestFifthFromLast < Minitest::Test
         l.nth(3).append SingleList.new("fifth")
 
         assert_equal "first", l.fifth_from_last.data
+    end
+
+    def test_list_with_6_members
+        l = SingleList.new("first")
+        l.append SingleList.new("second")
+        l.nth(1).append SingleList.new("third")
+        l.nth(2).append SingleList.new("forth")
+        l.nth(3).append SingleList.new("fifth")
+        l.nth(4).append SingleList.new("sixth")
+
+        assert_equal "second", l.fifth_from_last.data
     end
 end
 
