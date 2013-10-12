@@ -10,6 +10,14 @@ class SingleList
     def append(list)
         @next = list
     end
+
+    def last
+        pointer = self
+        while pointer.next != nil
+            pointer = pointer.next
+        end
+        pointer
+    end
 end
 
 
@@ -36,5 +44,14 @@ class TestSingleListDefinition < Minitest::Test
         l = SingleList.new("head")
         l.append(SingleList.new("second"))
         assert_equal "second",l.next.data
+    end
+
+    def test_get_last
+        l = SingleList.new("head")
+        l.append(SingleList.new("second"))
+        l.next.append(SingleList.new("third"))
+        l.next.next.append(SingleList.new("last"))
+
+        assert_equal "last", l.last.data
     end
 end
