@@ -45,12 +45,17 @@ class SingleList
     def has_next?
         self.next != nil
     end
+
+    def fifth_from_last
+        nil
+    end
 end
 
 
-class MyTest < Minitest::Test
-    def test_aoe
-        assert_equal 1, 1
+class TestFifthFromLast < Minitest::Test
+    def test_empty_list
+        l = SingleList.new
+        assert_equal nil, l.fifth_from_last
     end
 end
 
