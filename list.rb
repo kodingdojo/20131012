@@ -41,6 +41,10 @@ class SingleList
         end
         count
     end
+
+    def has_next?
+        self.next != nil
+    end
 end
 
 
@@ -103,5 +107,11 @@ class TestSingleListDefinition < Minitest::Test
         l.next.next.append(SingleList.new("last"))
 
         assert_equal 4, l.length
+    end
+
+    def test_has_next
+        l = SingleList.new("head")
+
+        assert_equal false, l.has_next?
     end
 end
