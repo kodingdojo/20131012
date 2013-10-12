@@ -46,9 +46,9 @@ class SingleList
         self.next != nil
     end
 
-    def fifth_from_last
-        if length >= 5
-            nth(length - 5)
+    def nth_from_last(n)
+        if length >= n
+            nth(length - n)
         else
             nil
         end
@@ -56,23 +56,23 @@ class SingleList
 end
 
 
-class TestFifthFromLast < Minitest::Test
+class TestNthFromLast < Minitest::Test
     def test_empty_list
         l = SingleList.new
-        assert_equal nil, l.fifth_from_last
+        assert_equal nil, l.nth_from_last(5)
     end
 
-    def test_list_with_5_members
+    def test_5th_from_last_with_5_members
         l = SingleList.new("first")
         l.append SingleList.new("second")
         l.nth(1).append SingleList.new("third")
         l.nth(2).append SingleList.new("forth")
         l.nth(3).append SingleList.new("fifth")
 
-        assert_equal "first", l.fifth_from_last.data
+        assert_equal "first", l.nth_from_last(5).data
     end
 
-    def test_list_with_6_members
+    def test_5th_from_last_with_6_members
         l = SingleList.new("first")
         l.append SingleList.new("second")
         l.nth(1).append SingleList.new("third")
@@ -80,10 +80,10 @@ class TestFifthFromLast < Minitest::Test
         l.nth(3).append SingleList.new("fifth")
         l.nth(4).append SingleList.new("sixth")
 
-        assert_equal "second", l.fifth_from_last.data
+        assert_equal "second", l.nth_from_last(5).data
     end
 
-    def test_list_with_7_members
+    def test_5th_from_last_with_7_members
         l = SingleList.new("first")
         l.append SingleList.new("second")
         l.nth(1).append SingleList.new("third")
@@ -92,7 +92,7 @@ class TestFifthFromLast < Minitest::Test
         l.nth(4).append SingleList.new("sixth")
         l.nth(5).append SingleList.new("seventh")
 
-        assert_equal "third", l.fifth_from_last.data
+        assert_equal "third", l.nth_from_last(5).data
     end
 end
 
