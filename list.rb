@@ -31,6 +31,16 @@ class SingleList
         end
         pointer
     end
+
+    def length
+        pointer = self
+        count = 1
+        while pointer.next != nil
+            pointer = pointer.next
+            count += 1
+        end
+        count
+    end
 end
 
 
@@ -84,5 +94,14 @@ class TestSingleListDefinition < Minitest::Test
         l.next.next.append(SingleList.new("last"))
 
         assert_equal nil, l.nth(5)
+    end
+
+    def test_length
+        l = SingleList.new("head")
+        l.append(SingleList.new("second"))
+        l.next.append(SingleList.new("third"))
+        l.next.next.append(SingleList.new("last"))
+
+        assert_equal 4, l.length
     end
 end
