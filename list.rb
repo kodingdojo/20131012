@@ -47,12 +47,8 @@ class SingleList
     end
 
     def fifth_from_last
-        if length == 5
-            nth(5 - 5)
-        elsif length == 6
-            nth(6 - 5)
-        elsif length == 7
-            nth(7 - 5)
+        if length >= 5
+            nth(length - 5)
         else
             nil
         end
