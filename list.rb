@@ -62,6 +62,20 @@ class TestNthFromLast < Minitest::Test
         assert_equal nil, l.nth_from_last(5)
     end
 
+    def test_first_from_last_one_member
+        l = SingleList.new("first")
+
+        assert_equal "first", l.nth_from_last(1).data
+    end
+
+    def test_5th_from_list_less_than_five_members
+        l = SingleList.new("first")
+        l.append SingleList.new("second")
+        l.nth(1).append SingleList.new("third")
+
+        assert_equal nil, l.nth_from_last(5)
+    end
+
     def test_5th_from_last_with_5_members
         l = SingleList.new("first")
         l.append SingleList.new("second")
