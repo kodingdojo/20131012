@@ -8,7 +8,7 @@ require 'minitest/autorun'
 
 class SingleList
   def get_nth_to_last_element(memory, first_key, n)
-    return [3, 4]
+    [3, 4]
   end
 end
 
