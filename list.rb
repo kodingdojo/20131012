@@ -18,6 +18,12 @@ class SingleList
         end
         pointer
     end
+
+    def nth(n)
+        pointer = self
+        (1..n).each { pointer = pointer.next }
+        pointer
+    end
 end
 
 
@@ -53,5 +59,14 @@ class TestSingleListDefinition < Minitest::Test
         l.next.next.append(SingleList.new("last"))
 
         assert_equal "last", l.last.data
+    end
+
+    def test_nth_member
+        l = SingleList.new("head")
+        l.append(SingleList.new("second"))
+        l.next.append(SingleList.new("third"))
+        l.next.next.append(SingleList.new("last"))
+
+        assert_equal "third", l.nth(2).data
     end
 end
