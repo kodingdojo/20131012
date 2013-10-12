@@ -1,4 +1,4 @@
-Koding Dojo lần thứ N
+Koding Dojo lần thứ 4
 =====================
 
 Nhánh master chỉ để lưu README và ghi chép về buổi sinh hoạt. Lịch sử commit
@@ -35,22 +35,31 @@ và push lên remote mới:
 
 ## Bài toán
 
-Bài toán được giải quyết trong buổi tuần này là [...] xem tại <http://codingdojo.org/cgi-bin/wiki.pl>.
+Bài toán được giải quyết trong buổi tuần này là:
+
+> Xây dựng một chương trình truy cập phần tử thứ N từ cuối lên của một
+> singly linked list.
 
 
 ## Những người tham dự
 
 - @lewtds - Chin
 - @myguidingstar - Minh Thắng
-
+- @hainp - Phan Hải
+- @minh1234 - Phạm Đức Minh
 
 ## Retrospection
 
 ### Có gì tốt?
 
 - Fun!
-- ...
+- Học được "một chút" về Erlang
+- Học được cách implement một singly linked list
+- Đã có bình nước và café :3
 
 ### Có gì cần cải thiện?
 
-- ...
+- Nên chuẩn bị ngôn ngữ nhanh hơn (chọn từ trước hoặc chọn bằng xúc sắc). Nên
+  có người biết ngôn ngữ đang sử dụng trước.
+- Cần đông người tham dự hơn
+
