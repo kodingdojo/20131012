@@ -22,7 +22,7 @@ class SingleList
     def nth(n)
         pointer = self
         (1..n).each do
-            if pointer.next
+            if pointer.has_next?
                 pointer = pointer.next
             else
                 pointer = nil
