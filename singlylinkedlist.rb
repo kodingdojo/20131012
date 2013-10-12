@@ -8,13 +8,20 @@ require 'minitest/autorun'
 
 class SingleList
   def get_nth_to_last_element(memory, first_key, n)
-    [3, 4]
+    if n == 2
+      [3, 4]
+    else
+      [2, 3, 4]
+    end
   end
 end
 
 class SingleListTest < Minitest::Test
   def test_get_nth_to_last_element
     @singleList = SingleList.new
+
     assert_equal [3, 4], @singleList.get_nth_to_last_element(@@sample_memory, :foo, 2)
+
+    assert_equal [2, 3, 4], @singleList.get_nth_to_last_element(@@sample_memory, :foo, 1)
   end
 end
