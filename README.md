@@ -43,10 +43,18 @@ Bài toán được giải quyết trong buổi tuần này là:
 
 ## Những người tham dự
 
+Tách thành hai nhóm:
+
+https://github.com/kodingdojo/20131012/tree/chin-minh
+
 - @lewtds - Chin
+- @minh1234 - Phạm Đức Minh
+ 
+https://github.com/kodingdojo/20131012/tree/hainp
+
 - @myguidingstar - Minh Thắng
 - @hainp - Phan Hải
-- @minh1234 - Phạm Đức Minh
+
 
 ## Retrospection
 
