@@ -13,7 +13,7 @@ class SingleList
 
     def last
         pointer = self
-        while pointer.next != nil
+        while pointer.has_next?
             pointer = pointer.next
         end
         pointer
@@ -35,7 +35,7 @@ class SingleList
     def length
         pointer = self
         count = 1
-        while pointer.next != nil
+        while pointer.has_next?
             pointer = pointer.next
             count += 1
         end
